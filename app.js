@@ -8,8 +8,7 @@ const connection = require('./database/Connection');
 connection()
 const app=express()
 app.enable("trust proxy",1)
-app.use(cors({origin:["http://localhost:3000"],credentials:true,methods:["POST","GET"]}))
-
+app.use(cors());
 app.use(
   session({
       key: "userId",
