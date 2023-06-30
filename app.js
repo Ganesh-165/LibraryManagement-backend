@@ -8,7 +8,7 @@ const connection = require('./database/Connection');
 connection()
 const app=express()
 app.enable("trust proxy",1)
-app.use(cors());
+app.use(cors({origin:"https://librarymanagementclient.onrender.com/"}));
 app.use(
   session({
       key: "userId",
